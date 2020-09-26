@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  logicalFilePath="db.changelog-master.xml"
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+  <changeSet author="jan.szczygiel" context="dev" id="1.0_users-data">
+
+    <insert tableName="USERS">
+      <column name="USER_ID" value="1"/>
+      <column name="USERNAME" value="testUser"/>
+      <column name="FAVORITE_ANIMAL" value="Boar"/>
+    </insert>
+    <insert tableName="USERS">
+      <column name="USER_ID" value="2"/>
+      <column name="USERNAME" value="testUser2"/>
+      <column name="FAVORITE_ANIMAL" value="Dog"/>
+    </insert>
+    <insert tableName="USERS">
+      <column name="USER_ID" value="3"/>
+      <column name="USERNAME" value="testUser3"/>
+      <column name="FAVORITE_ANIMAL" value="tyrannosaurus rex"/>
+
+    </insert>
+  </changeSet>
+</databaseChangeLog>

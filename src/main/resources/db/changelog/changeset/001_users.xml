@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  logicalFilePath="db.changelog-master.xml"
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+  <changeSet author="jan.szczygiel" id="1.0_users">
+
+    <createTable tableName="USERS">
+      <column name="USER_ID" type="BIGINT">
+        <constraints nullable="false" primaryKey="true"/>
+      </column>
+      <column name="USERNAME" type="VARCHAR(256)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="FAVORITE_ANIMAL" type="VARCHAR(256)">
+        <constraints nullable="true"/>
+      </column>
+    </createTable>
+
+    <createIndex indexName="USERS_USERNAME_UNIQUE_IDX"
+                 tableName="USERS"
+                 unique="true">
+      <column name="USERNAME"/>
+    </createIndex>
+
+    <createIndex indexName="USERS_USER_ID_UNIQUE_IDX"
+                 tableName="USERS"
+                 unique="true">
+      <column name="USER_ID"/>
+    </createIndex>
+
+    <createSequence schemaName="public"
+                    incrementBy="1"
+                    minValue="4"
+                    sequenceName="user_seq" />
+  </changeSet>
+</databaseChangeLog>

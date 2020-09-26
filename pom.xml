@@ -6,7 +6,7 @@
 	<groupId>com.areanoise</groupId>
 	<artifactId>area-noise-api</artifactId>
 	<version>1.0</version>
-	<description>Area Noise API/description>API</description>
+	<description>Area Noise API</description>
 
 	<properties>
 		<maven.compiler.source>11</maven.compiler.source>
@@ -107,6 +107,12 @@
 			<groupId>com.google.code.gson</groupId>
 			<artifactId>gson</artifactId>
 			<version>2.8.5</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.areanoise</groupId>
+			<artifactId>area-noise-api</artifactId>
+			<version>1.0.0</version>
 		</dependency>
 
 	</dependencies>
