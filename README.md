@@ -1,4 +1,4 @@
-# area-noise-backend
+# Server - Backend
 
 Used technologies:
 
@@ -17,6 +17,12 @@ Lombok - it's a mechanism for reducing the amount of code that you need to write
 MapStruct- I'm using Objects that are Entity (Data Access Object - database objects) and DTO (Data Transfer Object - used in webservices), they are similar but a bit different, so I use MapStruct to convert one object into second (I don't want to do it manually)
 
 Swagger UI - that nice page where you can see all available endpoints etc.
+
+----------
+
+#Infrastructure
+
+For infrastructe I decided to go with AWS EC2 for Virtual Machine and AWS Route 53 for domain and routing
 
 ----------
 
