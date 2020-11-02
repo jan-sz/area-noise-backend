@@ -6,6 +6,7 @@ REST webservices - OpenApi3 definitions are stored in second project https://git
 
 
 Spring Boot - the core of the server, it provides everything for webservices, an application server (Tomcat)
+
 Hibernate it's an ORM framework, it handles getting data from and saving data to database 
 
 Database - H2 but it can easily be changed to PostgreSQL or anything else, my solution is not-database  
