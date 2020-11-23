@@ -15,6 +15,14 @@
 		<spring.boot.version>2.3.3.RELEASE</spring.boot.version>
 	</properties>
 
+	<repositories>
+		<repository>
+			<id>github</id>
+			<name>GitHub Packages</name>
+			<url>https://jan-sz:840bea487543f6c5c08658099847a903d2eda516@maven.pkg.github.com/jan-sz/area-noise-spec-api</url>
+		</repository>
+	</repositories>
+
 	<distributionManagement>
 		<repository>
 			<id>github</id>
