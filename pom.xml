@@ -19,7 +19,7 @@
 		<repository>
 			<id>github</id>
 			<name>GitHub Packages</name>
-			<url>https://jan-sz:e06bbb0cb22ea8183ad6fac3e86213fb95dc4d86@maven.pkg.github.com/jan-sz/area-noise-spec-api</url>
+			<url>https://jan-sz:${{ secrets.PACKAGE_READ_TOKEN }}@maven.pkg.github.com/jan-sz/area-noise-spec-api</url>
 		</repository>
 	</repositories>
 
