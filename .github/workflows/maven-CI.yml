@@ -2,6 +2,9 @@
 # For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
 
 name: Java CI with Maven
+env:
+  ENV_PACKAGE_READ_TOKEN: ${{ secrets.PACKAGE_READ_TOKEN }}
+  ENV_GIT_USERNAME: jan-sz
 
 on:
   push:
