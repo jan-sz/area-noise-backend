@@ -16,7 +16,7 @@ import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 @ExtendWith(MockitoExtension.class)
-class UserServiceImplTest {
+public class UserServiceImplTest {
 
   @Mock UserRepository userRepository;
 
@@ -25,7 +25,7 @@ class UserServiceImplTest {
   @InjectMocks UserServiceImpl userService;
 
   @Test
-  void addUser() {
+  public void addUser() {
     String name = "testName";
     String favoriteAnimal = "testDog";
     UserPostRequestDTO userPostRequestDTO =
@@ -49,7 +49,7 @@ class UserServiceImplTest {
   }
 
   @Test
-  void getUser() {
+  public void getUser() {
     Long userId = 1L;
     String name = "testName";
     String favoriteAnimal = "testDog";
@@ -66,7 +66,7 @@ class UserServiceImplTest {
   }
 
   @Test
-  void updateUser() {
+  public void updateUser() {
     Long userId = 1L;
     String name = "testName";
     String favoriteAnimal = "testDog";
