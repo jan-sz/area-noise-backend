@@ -24,4 +24,4 @@ jobs:
       with:
         java-version: 11
     - name: Build with Maven and Install
-      run: mvn install
+      run: mvn -s settings.xml clean install -B -V
