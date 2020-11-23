@@ -26,4 +26,4 @@ jobs:
     - name: Maven Install
       run: mvn -s settings.xml clean install
     - name: Maven test
-      run: mvn test
+      run: mvn -s settings.xml test
