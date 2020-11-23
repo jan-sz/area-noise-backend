@@ -23,5 +23,7 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 11
-    - name: Build with Maven and Install
-      run: mvn -s settings.xml clean install -B -V
+    - name: Maven Install
+      run: mvn -s settings.xml clean install
+    - name: Maven test
+      run: mvn test
