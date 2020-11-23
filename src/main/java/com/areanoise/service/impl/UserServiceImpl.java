@@ -19,25 +19,27 @@ import org.springframework.transaction.annotation.Transactional;
 public class UserServiceImpl implements UserService {
 
     @Autowired
+    private UserMapper userMapper;
+
+    @Autowired
     private UserRepository userRepository;
 
     @Override
     public UserPostResponseDTO addUser(UserPostRequestDTO userPostRequestDTO) {
-        UserEntity userEntity = UserMapper.INSTANCE.userPostRequestDTOToUserEntity(userPostRequestDTO);
+        UserEntity userEntity = userMapper.userPostRequestDTOToUserEntity(userPostRequestDTO);
         log.info("UserServiceImpl.addUser = " + userEntity.toString());
-        return UserMapper.INSTANCE.userEntityToUserPostResponseDTO(userRepository.saveAndFlush(userEntity));
+        return userMapper.userEntityToUserPostResponseDTO(userRepository.saveAndFlush(userEntity));
     }
 
     @Override
     public UserDTO getUser(Long userId) {
-        return UserMapper.INSTANCE.userEntityToUserDTO(userRepository.getOne(userId));
+        return userMapper.userEntityToUserDTO(userRepository.getOne(userId));
     }
 
     @Override
     public UserDTO updateUser(Long userId, UserUpdatePutRequestDTO userUpdatePutRequestDTO) {
         UserEntity userEntity = userRepository.getOne(userId);
         userEntity.setFavoriteAnimal(userUpdatePutRequestDTO.getFavoriteAnimal());
-        userRepository.saveAndFlush(userEntity);
-        return UserMapper.INSTANCE.userEntityToUserDTO(userEntity);
+        return userMapper.userEntityToUserDTO(userRepository.saveAndFlush(userEntity));
     }
 }

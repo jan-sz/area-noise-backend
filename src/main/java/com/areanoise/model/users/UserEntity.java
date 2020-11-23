@@ -3,7 +3,6 @@ package com.areanoise.model.users;
 import lombok.*;
 import javax.persistence.*;
 
-@Data
 @Entity
 @Table(name = "USERS")
 @NoArgsConstructor
